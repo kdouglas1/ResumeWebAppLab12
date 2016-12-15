@@ -20,10 +20,10 @@ exports.getAll = function(callback) {
 };
 
 exports.getById = function(company_id, callback) {
-    var query = 'SELECT c.*, a.street, a.zipcode FROM company c ' +
-        'LEFT JOIN company_address ca on ca.company_id = c.company_id ' +
-        'LEFT JOIN address a on a.address_id = ca.address_id ' +
-        'WHERE c.company_id = ?';
+    var query = 'SELECT c.*, a.street, a.zip_code FROM company c ' +
+    'LEFT JOIN company_address ca on ca.company_id = c.company_id ' +
+    'LEFT JOIN address a on a.address_id = ca.address_id ' +
+    'WHERE c.company_id = ?';
     var queryData = [company_id];
     console.log(query);
 
